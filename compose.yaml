@@ -1,0 +1,8 @@
+services:
+  notebook:
+    image: jupyter/base-notebook:latest
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./data:/home/jovyan/work
+    entrypoint: ["jupyter", "notebook", "--allow-root", "-y"]
